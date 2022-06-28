@@ -1,0 +1,179 @@
+/*kroz sve stranice osim kreativne*/
+* {
+    font-family: 'Noto Sans', sans-serif;
+    word-break: break-word;
+}
+
+footer {
+    font-size: 70%;
+}
+
+/*makni underline između slika koje su poveznice*/
+[title="CC BY licenca"], [title="Zaglavlje"], [title="Validator HTML"],
+[title="Validator CSS"], [title="Validator2 CSS"], [title="Validator3 CSS"] {
+    text-decoration: none;
+}
+
+/*prilagodba logo slike*/
+#logo img {
+    width: 100%;
+    height: 300px;
+}
+
+/*boja teksta i pozadine*/
+body {
+    background-image: linear-gradient(rgb(81, 14, 119) 30%,rgb(16, 38, 109));
+    color: rgb(233, 225, 225);
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+main, footer, h1 {
+    margin: 8px;
+}
+
+/*linkovi*/
+a:link {
+    color:rgb(240, 46, 182);
+}
+a:visited {
+    color:rgb(247, 196, 56);
+}
+
+/*prilagodba iframe u popis.html*/
+iframe {
+    width: auto;
+}
+
+/*tekst unutar tablice u popis.html neka bude crn radi svjetlijih boja redaka*/
+#popis_korisnika {
+    color: black;
+}
+
+caption#naslov-tablice {
+    color: white;
+}
+
+/*specifični zahtjevi iz zadaće 2*/
+
+#clanak_slike img, video {
+    max-width: fit-content;
+    width: 200px;
+    height: 200px;
+    transition: width 0.4s, height 0.4s;
+}
+#clanak_slike img:hover {
+    /*transform: scale(1.3);*/
+    width: 250px;
+    height:250px;
+}
+
+/*prilagodba velicine tablice za stranicu popis.html*/
+#popis_korisnika {
+    display: block;
+    width: auto;
+}
+#popis_korisnika, #popis_korisnika th, #popis_korisnika td, #popis_korisnika tr {
+    word-break: break-word;
+    border: 1px solid black;
+}
+#popis_korisnika tr:nth-child(2n+1) {
+    background-color: rgb(181, 216, 245);
+}
+#popis_korisnika tr:nth-child(2n), #popis_korisnika thead > tr:first-child {
+    background-color: rgb(179, 241, 207);
+}
+#popis_korisnika tr:hover {
+    background-color: blanchedalmond;
+}
+
+.labela {
+    font-weight: bold;
+}
+
+[type="submit"], [type="reset"] {
+    width: auto;
+    height: auto;
+
+    border: none;
+    padding: 15px 15px;
+    margin: 5px 5px;
+
+    font-size: medium;
+    background-color: rgb(24, 138, 146);
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+img ~ figcaption {
+    font-style: italic;
+}
+
+/*izbornik*/
+h1 + a {
+    position: fixed;
+    right: 5%;
+    top: 1%;
+    z-index: 7;
+    font-size: 12px;
+    
+}
+noscript + nav {
+    background-color: rgb(30, 98, 155);
+    width: 100%;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 5;
+}
+nav li {
+    float: left;
+    display: block;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 12px;
+}
+nav li > a {
+    text-decoration: none;
+    padding: 2px;
+}
+nav li > a:hover {
+    background-color: rgb(100, 31, 128);
+}
+
+/*prilagodba mape na početnoj*/
+#slika-mapa {
+    max-width: 50%;
+    height: auto;
+    width: auto;
+}
+
+.grid-kontejner, .grid-kontejner2, .grid-kontejner3, .grid-kontejner4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@keyframes JSanimacija {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

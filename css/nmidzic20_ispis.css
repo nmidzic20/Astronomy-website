@@ -1,0 +1,37 @@
+header, footer {
+    display: none;
+}
+
+body {
+    background: white;
+    color: black;
+}
+
+img, canvas, a, input, button {
+    filter: gray; 
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%); 
+}
+
+#gumbi, video, audio {
+    display: none;
+}
+/*ukloni h2 naslove za video i audio*/
+#clanak_video h2, #clanak_audio h2 {
+    display: none;
+}
+
+figure > img.ispis, figure > figcaption {
+    display: block;
+    width: 100%;
+}
+/*obrazac se ispisuje u istom prikazu kao na velikom ekranu*/
+fieldset {
+    float: left;   
+    width: 25%;  
+}
+#gumbi, footer {
+    clear: both;
+}
+
+

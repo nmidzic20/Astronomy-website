@@ -1,0 +1,67 @@
+@media screen and (min-width: 481px) {
+
+  textarea {
+    width: 90%;
+  }
+  fieldset {
+    position: relative;
+    float: left;   
+    width: 25%;  
+  }
+  #gumbi, footer {
+      clear: both;
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+  /*tablica u popis.html prikazuje samo prve dvije kolumne, iframe prilagodba*/
+  #popis_korisnika td:nth-child(n+3), 
+  #popis_korisnika th:nth-child(n+3),
+  #popis_korisnika #spojeni {
+    display: none;
+  }
+  iframe {
+    width: 90%;
+  }
+  /*prilagođavanje tematskih cjelina*/
+  fieldset {
+    width: auto;
+  }
+  /*prilagođavanje polja obrasca*/
+  input, select, label, textarea {
+    width: 90%;
+  }
+  /*ako je mali ekran, prepolovi font za input datetime da se i to polje moze 
+  smanjiti, međutim, nakon neke granice se vise ne moze smanjiti (a manji font 
+  od ovog bi bio necitljiv), i ovo je jedini element koji bi mogao uzrokovati
+  horizontal scroll da nema overflow-x: hidden, jer datetime kontrola je pod
+  kontrolom preglednika, ne autora i ne moze se njegova sirina promijeniti 
+  od strane autora na zeljeni nacin, drugim rijecima kod responzivnog dizajna
+  ovo je najbolje sto se moze*/
+  [type="datetime-local"]
+  {
+    font-size: 50%;
+  }
+  /*radio buttoni su posebna prica pa override input od 2. ruleseta iznad*/
+  [type="radio"]
+  {
+    width: auto;
+  }
+
+  /*ako se ekran smanjuje do niceg, u trenutku kad vise ne mozes resizati
+  pocni skrivati sadržaj bez horizontal scrolla - inace nije potrebno nego
+  samo bas pri "sirinama ekrana" od 5 cm...*/
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+}
+
+
+
