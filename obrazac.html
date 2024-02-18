@@ -1,144 +1,314 @@
 <!DOCTYPE html>
 <html lang="hr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Noa Midžić">
-        <meta name="description" content="html,head,body">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" media="screen" href="./css/nmidzic20.css">
-        <link type="text/css" rel="stylesheet" media="screen" href="./css/nmidzic20_responzivni_dizajn.css">
-        <link type="text/css" rel="stylesheet" media="print" href="./css/nmidzic20_ispis.css">
-        <title>Obrazac</title>
-        <script src="js/nmidzic20.js"></script>
-    </head>
-    <body>
-        <div id="skocni"></div>
-        <header id="zaglavlje">
-            <div id="logo">
-                <a href="index.html" title="Obrazac">
-                        <img src="materijali/logo.jpg" id="verzijaLoga" alt="logo1 - slika galaksije">
-                </a>
-            </div>
-            <h1>Obrazac</h1>
-            <a href="https://www.foi.unizg.hr/" id="PrijavaOdjava">Prijava</a>
-            <noscript><dialog open>Vaš preglednik ne podržava JavaScript!</dialog></noscript>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Početna</a></li>
-                    <li><a href="podaci/popis.html">Popis</a></li>
-                    <li><a href="ostalo/kreativna.html">Kreativna</a></li>
-                    <li><a href="ostalo/multimedija.html">Multimedija</a></li>
-                    <li><a href="ostalo/o_autoru.html">O autoru</a></li>
-                </ul>
-            </nav>
-            <div id="ispisKolacica"></div>
-            <button id="korisnickiDizajn" type="submit">Promijeni dizajn stranice</button>
-        </header>
-        <main>
-            <h3>Za članove astronomskog kluba</h3>
-            <form id="obrazac" action="https://spider.foi.hr/OWT/materijali/ispis_forme.php" method="POST" novalidate>
-                <fieldset name="Osnovne informacije">
-                    <legend>Osnovne informacije</legend>
-                    <label for="Korisnicko_ime" class="labela">Korisničko ime:</label>
-                    <input type="text" id="Korisnicko_ime" class="input" name="Korisnicko_ime" required placeholder="Korisničko ime">
-                    <br/><br/>
-                    <label for="Lozinka" class="labela">Lozinka:</label>
-                    <input type="password" id="Lozinka" class="input" name="Lozinka" required minlength="6" placeholder="Lozinka">
-                    <br/><br/>
-                    <label for="E-mail" class="labela">E-mail:</label>
-                    <input type="email" id="E-mail" class="input" name="E-mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="primjer@primjer.com">
-                    <br/><br/>
-                    <label for="Telefon" class="labela">Tel.broj:</label>
-                    <input type="tel" id="Telefon" class="input" name="Telefon" minlength="8" maxlength="13" pattern="[0-9]{8,13}" placeholder="0XXXXXXXXX">
-                    <br/><br/>
-                    <label for="URL" class="labela">URL na Wiki stranicu sazviježđa vašeg horoskopskog znaka:</label>
-                    <input type="url" id="URL" class="input" name="URL" placeholder="https://en.wikipedia.org/wiki/Sagittarius_(constellation)">
-                    <br/><br/>
-                    <span id="radiobutton" class="labela">Ja sam:</span>
-                    <br>
-                    <label for="srednj">Srednjoškolac</label>
-                        <input type="radio" id="srednj" class="input" name="Status" value="Srednjoskolac" required>
-                    <br>
-                    <label for="student">Student</label>
-                        <input type="radio" id="student" class="input" name="Status" value="Student">
-                    <br>
-                    <label for="zaposlen">Zaposlen</label>
-                        <input type="radio" id="zaposlen" class="input" name="Status" value="Zaposlen">
-                    <br>
-                    <label for="neZelim">Ne želim se izjasniti</label>
-                        <input type="radio" id="neZelim" class="input" name="Status" value="Ne zelim se izjasniti">
-                </fieldset>
-                <fieldset name="O vama">
-                    <legend>O vama</legend>
-                        <label for="Motivacija" class="labela">Motivacija:</label>
-                        <textarea id="Motivacija" class="input" name="motivacija" placeholder="Astronomiju volim zato što... (min. 100 znakova)"
-                            rows="10" cols="40" maxlength="1000"></textarea>
-                        <br/><br/>
-                        <label for="Dob" class="labela">Godine iskustva s astronomijom:</label>
-                        <input type="number" id="Dob" class="input" name="Dob" min="0" max="100" required value="1">
-                        <br/><br/>
-                        <label for="teme" class="labela">Tema o kojoj najviše želite saznati:</label>
-                        <select id="teme" class="input" name="teme[]" multiple>
-                            <optgroup label="Povijest astronomije">
-                                <option value="Keplerovi zakoni">Keplerovi zakoni</option>
-                                <option value="Newtonova teorija gravitacije">Newtonova teorija gravitacije</option>
-                                <option value="Suvremena astronomija">Suvremena astronomija</option>
-                            </optgroup>
-                            <optgroup label="Svemirska tijela">
-                                <option value="Zvijezda sunce">Zvijezda Sunce</option>
-                                <option value="Zemlja i mjesec">Zemlja i Mjesec</option>
-                                <option value="Galaktike">Galaktike</option>
-                            </optgroup>
-                            <optgroup label="Opažanje nebeskih tijela">
-                                <option value="Nebeska sfera">Nebeska sfera</option>
-                                <option value="Cirkumpolarna zviježđa">Cirkumpolarna zviježđa</option>
-                                <option value="Teleskopi">Teleskopi</option>
-                            </optgroup>
-                        </select> 
-                        <br/><br/>
-                        <label for="Termin" class="labela">Željeni termin za posjet zvjezdarnici:</label>
-                        <input type="text" id="Termin" class="input" name="Termin" placeholder="dd.mm.gggg. hh:mm:ss">
-                        <br/><br/>
-                        <label for="Interes" class="labela">Interes za izlete na Petrovu goru (promatranje noćnog neba):</label>
-                        <input type="range" id="Interes" class="input" name="Interes">
-                </fieldset>
-                <fieldset name="Aktivnosti">
-                    <legend>Aktivnosti</legend>
-                        <span id="checkboxPolje" class="labela">Od aktivnosti kluba zanimaju me:</span>
-                        <br>
-                        <label for="predavanja">Predavanja</label>
-                            <input type="checkbox" id="predavanja" class="input" name="aktivnosti[]" value="Predavanja">
-                        <label for="promatranje">Promatranje teleskopom</label>
-                            <input type="checkbox" id="promatranje" class="input" name="aktivnosti[]" value="Promatranje teleskopom">
-                        <label for="astrofotografija">Astrofotografija</label>
-                            <input type="checkbox" id="astrofotografija" class="input" name="aktivnosti[]" value="Astrofotografija">
-                        <label for="mjesecniCasopis">Mjesečni časopis</label>
-                            <input type="checkbox" id="mjesecniCasopis" class="input" name="aktivnosti[]" value="Mjesecni casopis">
-                        <label for="druzenja">Druženja</label>
-                            <input type="checkbox" id="druzenja" class="input" name="aktivnosti[]" value="Druzenja">
-                </fieldset>
-                <div id="gumbi">
-                <br/>
-                    <input type="submit" name="Prenesi" value="Prenesi">
-                    <input type="reset" name="Ponisti" value="Poništi">
-                </div>
-            </form>
-            <br/>
-            <br/>
-        </main>
-        <hr>
-        <footer>
-            <a href="https://creativecommons.org/licenses/by/4.0/" title="CC BY licenca">
-                    <img src="materijali/cc_by.png" height="30" alt="CC BY">
-            </a>
-            <a href="mailto:nmidzic20@foi.hr">&copy; N. Midžić 2022</a>
-            <a href="http://validator.w3.org/check?uri=https://spider.foi.hr/OWT/2022/zadaca_03/nmidzic20/obrazac.html" title="Validator HTML">
-                    <img src="https://spider.foi.hr/OWT/materijali/slike/HTML5.png" height="30" alt="ikona validatora">
-            </a>
-            <a href="#zaglavlje" title="Zaglavlje">
-                <img src="materijali/zaglavlje.png" height="30" alt="zaglavlje">
-            </a>
-        </footer>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Noa Midžić" />
+    <meta name="description" content="html,head,body" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      media="screen"
+      href="./css/nmidzic20.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      media="screen"
+      href="./css/nmidzic20_responzivni_dizajn.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      media="print"
+      href="./css/nmidzic20_ispis.css"
+    />
+    <title>Obrazac</title>
+    <script src="js/nmidzic20.js"></script>
+  </head>
+  <body>
+    <div id="skocni"></div>
+    <header id="zaglavlje">
+      <div id="logo">
+        <a href="index.html" title="Obrazac">
+          <img
+            src="materijali/logo.jpg"
+            id="verzijaLoga"
+            alt="logo1 - slika galaksije"
+          />
+        </a>
+      </div>
+      <h1>Obrazac</h1>
+      <a href="https://www.foi.unizg.hr/" id="PrijavaOdjava">Prijava</a>
+      <noscript
+        ><dialog open>Vaš preglednik ne podržava JavaScript!</dialog></noscript
+      >
+      <nav>
+        <ul>
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="podaci/popis.html">Popis</a></li>
+          <li><a href="ostalo/kreativna.html">Kreativna</a></li>
+          <li><a href="ostalo/multimedija.html">Multimedija</a></li>
+          <li><a href="ostalo/o_autoru.html">O autoru</a></li>
+        </ul>
+      </nav>
+      <div id="ispisKolacica"></div>
+      <button id="korisnickiDizajn" type="submit">
+        Promijeni dizajn stranice
+      </button>
+    </header>
+    <main>
+      <h3>Za članove astronomskog kluba</h3>
+      <form
+        id="obrazac"
+        action="./materijali/ispis_forme.php"
+        method="POST"
+        novalidate
+      >
+        <fieldset name="Osnovne informacije">
+          <legend>Osnovne informacije</legend>
+          <label for="Korisnicko_ime" class="labela">Korisničko ime:</label>
+          <input
+            type="text"
+            id="Korisnicko_ime"
+            class="input"
+            name="Korisnicko_ime"
+            required
+            placeholder="Korisničko ime"
+          />
+          <br /><br />
+          <label for="Lozinka" class="labela">Lozinka:</label>
+          <input
+            type="password"
+            id="Lozinka"
+            class="input"
+            name="Lozinka"
+            required
+            minlength="6"
+            placeholder="Lozinka"
+          />
+          <br /><br />
+          <label for="E-mail" class="labela">E-mail:</label>
+          <input
+            type="email"
+            id="E-mail"
+            class="input"
+            name="E-mail"
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            placeholder="primjer@primjer.com"
+          />
+          <br /><br />
+          <label for="Telefon" class="labela">Tel.broj:</label>
+          <input
+            type="tel"
+            id="Telefon"
+            class="input"
+            name="Telefon"
+            minlength="8"
+            maxlength="13"
+            pattern="[0-9]{8,13}"
+            placeholder="0XXXXXXXXX"
+          />
+          <br /><br />
+          <label for="URL" class="labela"
+            >URL na Wiki stranicu sazviježđa vašeg horoskopskog znaka:</label
+          >
+          <input
+            type="url"
+            id="URL"
+            class="input"
+            name="URL"
+            placeholder="https://en.wikipedia.org/wiki/Sagittarius_(constellation)"
+          />
+          <br /><br />
+          <span id="radiobutton" class="labela">Ja sam:</span>
+          <br />
+          <label for="srednj">Srednjoškolac</label>
+          <input
+            type="radio"
+            id="srednj"
+            class="input"
+            name="Status"
+            value="Srednjoskolac"
+            required
+          />
+          <br />
+          <label for="student">Student</label>
+          <input
+            type="radio"
+            id="student"
+            class="input"
+            name="Status"
+            value="Student"
+          />
+          <br />
+          <label for="zaposlen">Zaposlen</label>
+          <input
+            type="radio"
+            id="zaposlen"
+            class="input"
+            name="Status"
+            value="Zaposlen"
+          />
+          <br />
+          <label for="neZelim">Ne želim se izjasniti</label>
+          <input
+            type="radio"
+            id="neZelim"
+            class="input"
+            name="Status"
+            value="Ne zelim se izjasniti"
+          />
+        </fieldset>
+        <fieldset name="O vama">
+          <legend>O vama</legend>
+          <label for="Motivacija" class="labela">Motivacija:</label>
+          <textarea
+            id="Motivacija"
+            class="input"
+            name="motivacija"
+            placeholder="Astronomiju volim zato što... (min. 100 znakova)"
+            rows="10"
+            cols="40"
+            maxlength="1000"
+          ></textarea>
+          <br /><br />
+          <label for="Dob" class="labela"
+            >Godine iskustva s astronomijom:</label
+          >
+          <input
+            type="number"
+            id="Dob"
+            class="input"
+            name="Dob"
+            min="0"
+            max="100"
+            required
+            value="1"
+          />
+          <br /><br />
+          <label for="teme" class="labela"
+            >Tema o kojoj najviše želite saznati:</label
+          >
+          <select id="teme" class="input" name="teme[]" multiple>
+            <optgroup label="Povijest astronomije">
+              <option value="Keplerovi zakoni">Keplerovi zakoni</option>
+              <option value="Newtonova teorija gravitacije">
+                Newtonova teorija gravitacije
+              </option>
+              <option value="Suvremena astronomija">
+                Suvremena astronomija
+              </option>
+            </optgroup>
+            <optgroup label="Svemirska tijela">
+              <option value="Zvijezda sunce">Zvijezda Sunce</option>
+              <option value="Zemlja i mjesec">Zemlja i Mjesec</option>
+              <option value="Galaktike">Galaktike</option>
+            </optgroup>
+            <optgroup label="Opažanje nebeskih tijela">
+              <option value="Nebeska sfera">Nebeska sfera</option>
+              <option value="Cirkumpolarna zviježđa">
+                Cirkumpolarna zviježđa
+              </option>
+              <option value="Teleskopi">Teleskopi</option>
+            </optgroup>
+          </select>
+          <br /><br />
+          <label for="Termin" class="labela"
+            >Željeni termin za posjet zvjezdarnici:</label
+          >
+          <input
+            type="text"
+            id="Termin"
+            class="input"
+            name="Termin"
+            placeholder="dd.mm.gggg. hh:mm:ss"
+          />
+          <br /><br />
+          <label for="Interes" class="labela"
+            >Interes za izlete na Petrovu goru (promatranje noćnog neba):</label
+          >
+          <input type="range" id="Interes" class="input" name="Interes" />
+        </fieldset>
+        <fieldset name="Aktivnosti">
+          <legend>Aktivnosti</legend>
+          <span id="checkboxPolje" class="labela"
+            >Od aktivnosti kluba zanimaju me:</span
+          >
+          <br />
+          <label for="predavanja">Predavanja</label>
+          <input
+            type="checkbox"
+            id="predavanja"
+            class="input"
+            name="aktivnosti[]"
+            value="Predavanja"
+          />
+          <label for="promatranje">Promatranje teleskopom</label>
+          <input
+            type="checkbox"
+            id="promatranje"
+            class="input"
+            name="aktivnosti[]"
+            value="Promatranje teleskopom"
+          />
+          <label for="astrofotografija">Astrofotografija</label>
+          <input
+            type="checkbox"
+            id="astrofotografija"
+            class="input"
+            name="aktivnosti[]"
+            value="Astrofotografija"
+          />
+          <label for="mjesecniCasopis">Mjesečni časopis</label>
+          <input
+            type="checkbox"
+            id="mjesecniCasopis"
+            class="input"
+            name="aktivnosti[]"
+            value="Mjesecni casopis"
+          />
+          <label for="druzenja">Druženja</label>
+          <input
+            type="checkbox"
+            id="druzenja"
+            class="input"
+            name="aktivnosti[]"
+            value="Druzenja"
+          />
+        </fieldset>
+        <div id="gumbi">
+          <br />
+          <input type="submit" name="Prenesi" value="Prenesi" />
+          <input type="reset" name="Ponisti" value="Poništi" />
+        </div>
+      </form>
+      <br />
+      <br />
+    </main>
+    <hr />
+    <footer>
+      <a
+        href="https://creativecommons.org/licenses/by/4.0/"
+        title="CC BY licenca"
+      >
+        <img src="materijali/cc_by.png" height="30" alt="CC BY" />
+      </a>
+      <a href="mailto:nmidzic20@foi.hr">&copy; N. Midžić 2022</a>
+      <a
+        href="http://validator.w3.org/check?uri=./obrazac.html"
+        title="Validator HTML"
+      >
+        <img src="./materijali/HTML5.png" height="30" alt="ikona validatora" />
+      </a>
+      <a href="#zaglavlje" title="Zaglavlje">
+        <img src="materijali/zaglavlje.png" height="30" alt="zaglavlje" />
+      </a>
+    </footer>
+  </body>
 </html>

@@ -1,134 +1,190 @@
 <!DOCTYPE html>
 <html lang="hr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Noa Midžić">
-        <meta name="description" content="html,head,body">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" media="screen" href="../css/nmidzic20.css">
-        <link type="text/css" rel="stylesheet" media="screen" href="../css/nmidzic20_responzivni_dizajn.css">
-        <link type="text/css" rel="stylesheet" media="print" href="../css/nmidzic20_ispis.css">
-        <title>Multimedija</title>
-        <script src="../js/nmidzic20.js"></script>
-    </head>
-    <body>
-        <div id="skocni"></div>
-        <header id="zaglavlje">
-            <div id="logo">
-                <a href="../index.html" title="Multimedija">
-                        <img src="../materijali/logo.jpg" id="verzijaLoga" alt="logo1 - slika galaksije">
-                </a>
-            </div>
-            <h1>Multimedija</h1>
-            <a href="https://www.foi.unizg.hr/" id="PrijavaOdjava">Prijava</a>
-            <noscript><dialog open>Vaš preglednik ne podržava JavaScript!</dialog></noscript>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Početna</a></li>
-                    <li><a href="../obrazac.html">Obrazac</a></li>
-                    <li><a href="../podaci/popis.html">Popis</a></li>
-                    <li><a href="../ostalo/kreativna.html">Kreativna</a></li>
-                    <li><a href="../ostalo/o_autoru.html">O autoru</a></li>
-                </ul>
-            </nav>
-            <div id="ispisKolacica"></div>
-            <button id="korisnickiDizajn" type="submit">Promijeni dizajn stranice</button>
-        </header>
-        <main>
-            <article id="clanak_slike">
-                <h2>Slike</h2>
-                <div id="grid">
-                <div class="grid-kontejner">
-                <figure>
-                    <img class="ispis" src="../materijali/slika1.jpg" alt="https://fr.m.wikipedia.org/wiki/Fichier:NASA_Unveils_Celestial_Fireworks_as_Official_Hubble_25th_Anniversary_Image.jpg">
-                    <figcaption>Nakupina zvijezda Westerlund 2</figcaption>
-                </figure>
-                <figure>
-                    <img class="ispis" src="../materijali/slika2.jpg" alt="https://www.nasa.gov/image-feature/hubble-shoots-the-moon">
-                    <figcaption>Hubbleova slika Mjeseca</figcaption>
-                </figure>
-                <figure>
-                    <img class="ispis" src="../materijali/slika3.jpg" alt="https://www.nasa.gov/feature/goddard/2021/hubble-watches-how-a-giant-planet-grows">
-                    <figcaption>Ilustracija formacije planeta</figcaption>
-                </figure>
-                <figure>
-                    <img class="ispis" src="../materijali/slika4.jpg" alt="https://cosmic-watch.com/cosmicbeta/the-sun-from-space/">
-                    <figcaption>Pogled na Sunce iz svemira</figcaption>
-                </figure>
-                <figure>
-                    <img class="ispis" src="../materijali/slika5.jpg" alt="https://newsbeezer.com/photos-of-saturn-in-summer-taken-with-the-hubble-space-telescope/">
-                    <figcaption>Hubbleova slika Saturna</figcaption>
-                </figure>
-                <figure>
-                    <img class="ispis" src="../materijali/slika6.jpg" alt="https://astronomy.com/news/2017/04/best-of-hubble-images">
-                    <figcaption>Cone Nebula (regija u zviježđu Jednorog)</figcaption>
-                </figure>
-                </div>
-                </div>
-            </article>
-            <div class="grid-kontejner2">
-            <article id="clanak_video">
-                <h2>Videi</h2>
-                <div class="grid-kontejner3">
-                <video controls poster="../materijali/poster1.jpg">
-                    <source src="../materijali/video1.mp4">
-                    Video nije podržan u pregledniku!
-                </video>
-                <video controls poster="../materijali/poster2.jpg">
-                    <source src="../materijali/video2.mp4">
-                    Video nije podržan u pregledniku!
-                </video>
-                <video controls poster="../materijali/poster3.jpg">
-                    <source src="../materijali/video3.mp4">
-                    Video nije podržan u pregledniku!
-                </video>
-                <video controls poster="../materijali/poster4.jpeg">
-                    <source src="../materijali/video4.mp4">
-                    Video nije podržan u pregledniku!
-                </video>
-                <video controls poster="../materijali/poster5.jpg">
-                    <source src="../materijali/video5.mp4">
-                    Video nije podržan u pregledniku!
-                </video>
-                </div>
-            </article>
-            <article id="clanak_audio">
-                <h2>Audio</h2>
-                <div id="grid-kontejner4">
-                    <audio controls muted>
-                        <source src="../materijali/audio1.mp3">
-                        Audio nije podržan u pregledniku!
-                    </audio>
-                    <audio controls muted>
-                        <source src="../materijali/audio2.mp3">
-                        Audio nije podržan u pregledniku!
-                    </audio>
-                    <audio controls muted>
-                        <source src="../materijali/audio3.mp3">
-                        Audio nije podržan u pregledniku!
-                    </audio>
-                    <audio controls muted>
-                        <source src="../materijali/audio4.mp3">
-                        Audio nije podržan u pregledniku!
-                    </audio>
-                </div>
-            </article>
-            </div>
-        <br/>
-        </main>
-        <hr>
-        <footer>
-            <a href="https://creativecommons.org/licenses/by/4.0/" title="CC BY licenca">
-                    <img src="../materijali/cc_by.png" height="30" alt="CC BY">
-            </a>
-            <a href="mailto:nmidzic20@foi.hr">&copy; N. Midžić 2022</a>
-            <a href="http://validator.w3.org/check?uri=https://spider.foi.hr/OWT/2022/zadaca_03/nmidzic20/ostalo/multimedija.html" title="Validator HTML">
-                    <img src="https://spider.foi.hr/OWT/materijali/slike/HTML5.png" height="30" alt="ikona validatora">
-            </a>
-            <a href="#zaglavlje" title="Zaglavlje">
-                <img src="../materijali/zaglavlje.png" height="30" alt="zaglavlje">
-            </a>
-        </footer>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Noa Midžić" />
+    <meta name="description" content="html,head,body" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      media="screen"
+      href="../css/nmidzic20.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      media="screen"
+      href="../css/nmidzic20_responzivni_dizajn.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      media="print"
+      href="../css/nmidzic20_ispis.css"
+    />
+    <title>Multimedija</title>
+    <script src="../js/nmidzic20.js"></script>
+  </head>
+  <body>
+    <div id="skocni"></div>
+    <header id="zaglavlje">
+      <div id="logo">
+        <a href="../index.html" title="Multimedija">
+          <img
+            src="../materijali/logo.jpg"
+            id="verzijaLoga"
+            alt="logo1 - slika galaksije"
+          />
+        </a>
+      </div>
+      <h1>Multimedija</h1>
+      <a href="https://www.foi.unizg.hr/" id="PrijavaOdjava">Prijava</a>
+      <noscript
+        ><dialog open>Vaš preglednik ne podržava JavaScript!</dialog></noscript
+      >
+      <nav>
+        <ul>
+          <li><a href="../index.html">Početna</a></li>
+          <li><a href="../obrazac.html">Obrazac</a></li>
+          <li><a href="../podaci/popis.html">Popis</a></li>
+          <li><a href="../ostalo/kreativna.html">Kreativna</a></li>
+          <li><a href="../ostalo/o_autoru.html">O autoru</a></li>
+        </ul>
+      </nav>
+      <div id="ispisKolacica"></div>
+      <button id="korisnickiDizajn" type="submit">
+        Promijeni dizajn stranice
+      </button>
+    </header>
+    <main>
+      <article id="clanak_slike">
+        <h2>Slike</h2>
+        <div id="grid">
+          <div class="grid-kontejner">
+            <figure>
+              <img
+                class="ispis"
+                src="../materijali/slika1.jpg"
+                alt="https://fr.m.wikipedia.org/wiki/Fichier:NASA_Unveils_Celestial_Fireworks_as_Official_Hubble_25th_Anniversary_Image.jpg"
+              />
+              <figcaption>Nakupina zvijezda Westerlund 2</figcaption>
+            </figure>
+            <figure>
+              <img
+                class="ispis"
+                src="../materijali/slika2.jpg"
+                alt="https://www.nasa.gov/image-feature/hubble-shoots-the-moon"
+              />
+              <figcaption>Hubbleova slika Mjeseca</figcaption>
+            </figure>
+            <figure>
+              <img
+                class="ispis"
+                src="../materijali/slika3.jpg"
+                alt="https://www.nasa.gov/feature/goddard/2021/hubble-watches-how-a-giant-planet-grows"
+              />
+              <figcaption>Ilustracija formacije planeta</figcaption>
+            </figure>
+            <figure>
+              <img
+                class="ispis"
+                src="../materijali/slika4.jpg"
+                alt="https://cosmic-watch.com/cosmicbeta/the-sun-from-space/"
+              />
+              <figcaption>Pogled na Sunce iz svemira</figcaption>
+            </figure>
+            <figure>
+              <img
+                class="ispis"
+                src="../materijali/slika5.jpg"
+                alt="https://newsbeezer.com/photos-of-saturn-in-summer-taken-with-the-hubble-space-telescope/"
+              />
+              <figcaption>Hubbleova slika Saturna</figcaption>
+            </figure>
+            <figure>
+              <img
+                class="ispis"
+                src="../materijali/slika6.jpg"
+                alt="https://astronomy.com/news/2017/04/best-of-hubble-images"
+              />
+              <figcaption>Cone Nebula (regija u zviježđu Jednorog)</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+      <div class="grid-kontejner2">
+        <article id="clanak_video">
+          <h2>Videi</h2>
+          <div class="grid-kontejner3">
+            <video controls poster="../materijali/poster1.jpg">
+              <source src="../materijali/video1.mp4" />
+              Video nije podržan u pregledniku!
+            </video>
+            <video controls poster="../materijali/poster2.jpg">
+              <source src="../materijali/video2.mp4" />
+              Video nije podržan u pregledniku!
+            </video>
+            <video controls poster="../materijali/poster3.jpg">
+              <source src="../materijali/video3.mp4" />
+              Video nije podržan u pregledniku!
+            </video>
+            <video controls poster="../materijali/poster4.jpeg">
+              <source src="../materijali/video4.mp4" />
+              Video nije podržan u pregledniku!
+            </video>
+            <video controls poster="../materijali/poster5.jpg">
+              <source src="../materijali/video5.mp4" />
+              Video nije podržan u pregledniku!
+            </video>
+          </div>
+        </article>
+        <article id="clanak_audio">
+          <h2>Audio</h2>
+          <div id="grid-kontejner4">
+            <audio controls muted>
+              <source src="../materijali/audio1.mp3" />
+              Audio nije podržan u pregledniku!
+            </audio>
+            <audio controls muted>
+              <source src="../materijali/audio2.mp3" />
+              Audio nije podržan u pregledniku!
+            </audio>
+            <audio controls muted>
+              <source src="../materijali/audio3.mp3" />
+              Audio nije podržan u pregledniku!
+            </audio>
+            <audio controls muted>
+              <source src="../materijali/audio4.mp3" />
+              Audio nije podržan u pregledniku!
+            </audio>
+          </div>
+        </article>
+      </div>
+      <br />
+    </main>
+    <hr />
+    <footer>
+      <a
+        href="https://creativecommons.org/licenses/by/4.0/"
+        title="CC BY licenca"
+      >
+        <img src="../materijali/cc_by.png" height="30" alt="CC BY" />
+      </a>
+      <a href="mailto:nmidzic20@foi.hr">&copy; N. Midžić 2022</a>
+      <a
+        href="http://validator.w3.org/check?uri=./multimedija.html"
+        title="Validator HTML"
+      >
+        <img src="./materijali/HTML5.png" height="30" alt="ikona validatora" />
+      </a>
+      <a href="#zaglavlje" title="Zaglavlje">
+        <img src="../materijali/zaglavlje.png" height="30" alt="zaglavlje" />
+      </a>
+    </footer>
+  </body>
 </html>

@@ -1,160 +1,252 @@
 <!DOCTYPE html>
 <html lang="hr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Noa Midžić">
-        <meta name="description" content="html,head,body">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="./css/nmidzic20.css">
-        <link type="text/css" rel="stylesheet" media="screen" href="./css/nmidzic20_responzivni_dizajn.css">
-        <link type="text/css" rel="stylesheet" media="print" href="./css/nmidzic20_ispis.css">
-        <title>Početna</title>
-        <script src="js/nmidzic20.js"></script>
-    </head>
-    <body>
-        <div id="skocni"></div>
-        <header id="zaglavlje">
-            <div id="logo">
-                <a href="index.html" title="Početna">
-                        <img src="materijali/logo.jpg" id="verzijaLoga" alt="logo1 - slika galaksije">
-                </a>
-            </div>
-            <h1>Početna</h1>
-            <a href="https://www.foi.unizg.hr/" id="PrijavaOdjava">Prijava</a>
-            <noscript><dialog open>Vaš preglednik ne podržava JavaScript!</dialog></noscript>
-            <nav>
-                <ul>
-                    <li><a href="./obrazac.html">Obrazac</a></li>
-                    <li><a href="podaci/popis.html">Popis</a></li>
-                    <li><a href="ostalo/kreativna.html">Kreativna</a></li>
-                    <li><a href="ostalo/multimedija.html">Multimedija</a></li>
-                    <li><a href="ostalo/o_autoru.html">O autoru</a></li>
-                </ul>
-            </nav>
-            <div id="ispisKolacica"></div>
-            <button id="korisnickiDizajn" type="submit">Promijeni dizajn stranice</button>
-        </header>
-        <main>
-            <ul>
-                <li>
-                    Povećanje/smanjivanje sadržaja
-                    <ul>
-                        <li>Opis: Klikom na poveznicu ispod se pokreće animacija
-                            povećavanja/smanjivanja linka za odjavu.
-                        </li>
-                        <li>
-                            <a href="" id="anim1">Gdje se odjaviti?</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    Rotiranje sadržaja
-                    <ul>
-                        <li>Opis: Na stranici Multimedija, klikom na bilo koju 
-                            sliku iz galerije se ona rotira za 90 stupnjeva u 
-                            nasumičnom smjeru.
-                        </li>
-                        <li>
-                            <a href="/multimedija">Slike u galeriji</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    Animacija po želji
-                    <ul>
-                        <li>Opis: Skrolanjem po kreativnoj stranici će se kada se
-                            dosegne mjesto za kartu zvijezda, pojaviti karta tako da
-                            se animacijom prvo proširi pa onda i ispuni svoju visinu.
-                        </li>
-                        <li>
-                            <a href="./ostalo/kreativna.html">Skrolaj gore-dolje po stranici Kreativna da vidiš efekt</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <div>
-                <figure>
-                    <img id="slika-mapa" src="materijali/sagittarius.jpg" usemap="#moja_mapa" alt="Sazviježđe Strijelca" height="400">
-                    <map name="moja_mapa" id="moja_mapa">
-                        <area href="ostalo/multimedija.html#clanak_slike" alt="Krug" shape="circle" coords="40,40,40"/>
-                        <area href="ostalo/multimedija.html#clanak_video" alt="Pravokutnik" shape="rect" coords="100,0,250,80"/>
-                        <area href="ostalo/multimedija.html#clanak_audio" alt="Višekut" shape="poly" coords="10,100,60,90,150,140,60,150"/>
-                    </map>
-                    <figcaption>Sazviježđe Strijelca</figcaption>
-                </figure>
-                <div id="oblik-koordinate"></div>
-                <p>
-                    Ovo je Hubbleova slika komadića neba koji sadrži sažviježđe Strijelca 
-                    (Sagittarius, po latinskom <i>sagitta</i> - strijela). U grčkoj mitologiji 
-                    Strijelac je kentaur čija strijela je uperena u zvijezdu Antares, ili srce 
-                    Škorpiona. Strijelac je jedno od zviježđa Zodijaka, a zanimljiv je zato
-                    što kroza nj prolazi trag Mliječne staze. Zbog toga je tamo grupirano
-                    mnogo zvjezdanih skupova te se u tom smjeru nalazi središte naše galaksije.
-                    Strijelac mi je najdraže zviježđe i radi toga što je moj horoskopski znak.
-                </p>
-            </div>
-            <div id="canvas"></div>
-            <template id="template">
-                <canvas id="statistika" width="400" height="200"></canvas>
-            </template>
-            <button id="prikaziFormu" type="submit">Prikaži formu za graf</button>
-            <form id="grafForma" style="display:none" novalidate>
-                <fieldset style="width:50%">
-					<legend>Što mislite, koliki je omjer zvijezda i planeta u našoj galaksiji?</legend>
-                    <table>
-                        <tr>
-                            <td>
-                                <label for="objektGrafa" style="word-break: initial">Odaberi objekt s grafa (planeti - zeleno, zvijezde - crveno):</label>
-                            </td>
-                            <td>
-                                <select name="objektGrafa" id="objektGrafa">
-                                    <option value="Planeti">Planeti</option>
-                                    <option value="Zvijezde">Zvijezde</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="kolicinaGraf" style="word-break: initial">Unesi količinu (0-20):</label>
-                            </td>
-                            <td>
-                                <input type="number" min=0 max=20 id="kolicinaGraf" name="kolicinaGraf" required/>
-                            </td>
-                        </tr>
-                    </table>
-                    <br/>
-                    <button type ="submit" id="grafGumb">OK</button>
-                </fieldset>
-            </form>
-        </main>
-        <br><br><br>
-        <footer>
-            <a href="https://creativecommons.org/licenses/by/4.0/" title="CC BY licenca">
-                <img src="materijali/cc_by.png" height="20" alt="CC BY">
-            </a>
-            <a href="mailto:nmidzic20@foi.hr">&copy; N. Midžić 2022</a>
-            <a href="http://validator.w3.org/check?uri=https://spider.foi.hr/OWT/2022/zadaca_03/nmidzic20/index.html" title="Validator HTML">
-                <img src="https://spider.foi.hr/OWT/materijali/slike/HTML5.png" height="20" alt="ikona validatora HTML">
-            </a>
-            <a href="#zaglavlje" title="Zaglavlje">
-                <img src="materijali/zaglavlje.png" height="20" alt="zaglavlje">
-            </a>
-            <br>
-            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://spider.foi.hr/OWT/2022/zadaca_03/nmidzic20/css/nmidzic20.css" title="Validator CSS">
-                <img src="https://spider.foi.hr/OWT/materijali/slike/CSS3.png" height="20" alt="ikona validatora CSS">
-            </a>
-            <span>nmidzic20.css</span>
-            <br>
-            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://spider.foi.hr/OWT/2022/zadaca_03/nmidzic20/css/nmidzic20_responzivni_dizajn.css" title="Validator2 CSS">
-                <img src="https://spider.foi.hr/OWT/materijali/slike/CSS3.png" height="20" alt="ikona validatora CSS">
-            </a>
-            <span>nmidzic20_responzivni_dizajn.css</span>
-            <br>
-            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://spider.foi.hr/OWT/2022/zadaca_03/nmidzic20/css/nmidzic20_ispis.css" title="Validator3 CSS">
-                <img src="https://spider.foi.hr/OWT/materijali/slike/CSS3.png" height="20" alt="ikona validatora CSS">
-            </a>
-            <span>nmidzic20_ispis.css</span>
-        </footer>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Noa Midžić" />
+    <meta name="description" content="html,head,body" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link type="text/css" rel="stylesheet" href="./css/nmidzic20.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      media="screen"
+      href="./css/nmidzic20_responzivni_dizajn.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      media="print"
+      href="./css/nmidzic20_ispis.css"
+    />
+    <title>Početna</title>
+    <script src="js/nmidzic20.js"></script>
+  </head>
+  <body>
+    <div id="skocni"></div>
+    <header id="zaglavlje">
+      <div id="logo">
+        <a href="index.html" title="Početna">
+          <img
+            src="materijali/logo.jpg"
+            id="verzijaLoga"
+            alt="logo1 - slika galaksije"
+          />
+        </a>
+      </div>
+      <h1>Početna</h1>
+      <a href="https://www.foi.unizg.hr/" id="PrijavaOdjava">Prijava</a>
+      <noscript
+        ><dialog open>Vaš preglednik ne podržava JavaScript!</dialog></noscript
+      >
+      <nav>
+        <ul>
+          <li><a href="./obrazac.html">Obrazac</a></li>
+          <li><a href="podaci/popis.html">Popis</a></li>
+          <li><a href="ostalo/kreativna.html">Kreativna</a></li>
+          <li><a href="ostalo/multimedija.html">Multimedija</a></li>
+          <li><a href="ostalo/o_autoru.html">O autoru</a></li>
+        </ul>
+      </nav>
+      <div id="ispisKolacica"></div>
+      <button id="korisnickiDizajn" type="submit">
+        Promijeni dizajn stranice
+      </button>
+    </header>
+    <main>
+      <ul>
+        <li>
+          Povećanje/smanjivanje sadržaja
+          <ul>
+            <li>
+              Opis: Klikom na poveznicu ispod se pokreće animacija
+              povećavanja/smanjivanja linka za odjavu.
+            </li>
+            <li>
+              <a href="" id="anim1">Gdje se odjaviti?</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Rotiranje sadržaja
+          <ul>
+            <li>
+              Opis: Na stranici Multimedija, klikom na bilo koju sliku iz
+              galerije se ona rotira za 90 stupnjeva u nasumičnom smjeru.
+            </li>
+            <li>
+              <a href="/multimedija">Slike u galeriji</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Animacija po želji
+          <ul>
+            <li>
+              Opis: Skrolanjem po kreativnoj stranici će se kada se dosegne
+              mjesto za kartu zvijezda, pojaviti karta tako da se animacijom
+              prvo proširi pa onda i ispuni svoju visinu.
+            </li>
+            <li>
+              <a href="./ostalo/kreativna.html"
+                >Skrolaj gore-dolje po stranici Kreativna da vidiš efekt</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div>
+        <figure>
+          <img
+            id="slika-mapa"
+            src="materijali/sagittarius.jpg"
+            usemap="#moja_mapa"
+            alt="Sazviježđe Strijelca"
+            height="400"
+          />
+          <map name="moja_mapa" id="moja_mapa">
+            <area
+              href="ostalo/multimedija.html#clanak_slike"
+              alt="Krug"
+              shape="circle"
+              coords="40,40,40"
+            />
+            <area
+              href="ostalo/multimedija.html#clanak_video"
+              alt="Pravokutnik"
+              shape="rect"
+              coords="100,0,250,80"
+            />
+            <area
+              href="ostalo/multimedija.html#clanak_audio"
+              alt="Višekut"
+              shape="poly"
+              coords="10,100,60,90,150,140,60,150"
+            />
+          </map>
+          <figcaption>Sazviježđe Strijelca</figcaption>
+        </figure>
+        <div id="oblik-koordinate"></div>
+        <p>
+          Ovo je Hubbleova slika komadića neba koji sadrži sažviježđe Strijelca
+          (Sagittarius, po latinskom <i>sagitta</i> - strijela). U grčkoj
+          mitologiji Strijelac je kentaur čija strijela je uperena u zvijezdu
+          Antares, ili srce Škorpiona. Strijelac je jedno od zviježđa Zodijaka,
+          a zanimljiv je zato što kroza nj prolazi trag Mliječne staze. Zbog
+          toga je tamo grupirano mnogo zvjezdanih skupova te se u tom smjeru
+          nalazi središte naše galaksije. Strijelac mi je najdraže zviježđe i
+          radi toga što je moj horoskopski znak.
+        </p>
+      </div>
+      <div id="canvas"></div>
+      <template id="template">
+        <canvas id="statistika" width="400" height="200"></canvas>
+      </template>
+      <button id="prikaziFormu" type="submit">Prikaži formu za graf</button>
+      <form id="grafForma" style="display: none" novalidate>
+        <fieldset style="width: 50%">
+          <legend>
+            Što mislite, koliki je omjer zvijezda i planeta u našoj galaksiji?
+          </legend>
+          <table>
+            <tr>
+              <td>
+                <label for="objektGrafa" style="word-break: initial"
+                  >Odaberi objekt s grafa (planeti - zeleno, zvijezde -
+                  crveno):</label
+                >
+              </td>
+              <td>
+                <select name="objektGrafa" id="objektGrafa">
+                  <option value="Planeti">Planeti</option>
+                  <option value="Zvijezde">Zvijezde</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="kolicinaGraf" style="word-break: initial"
+                  >Unesi količinu (0-20):</label
+                >
+              </td>
+              <td>
+                <input
+                  type="number"
+                  min="0"
+                  max="20"
+                  id="kolicinaGraf"
+                  name="kolicinaGraf"
+                  required
+                />
+              </td>
+            </tr>
+          </table>
+          <br />
+          <button type="submit" id="grafGumb">OK</button>
+        </fieldset>
+      </form>
+    </main>
+    <br /><br /><br />
+    <footer>
+      <a
+        href="https://creativecommons.org/licenses/by/4.0/"
+        title="CC BY licenca"
+      >
+        <img src="materijali/cc_by.png" height="20" alt="CC BY" />
+      </a>
+      <a href="mailto:nmidzic20@foi.hr">&copy; N. Midžić 2022</a>
+      <a
+        href="http://validator.w3.org/check?uri=./index.html"
+        title="Validator HTML"
+      >
+        <img
+          src="./materijali/HTML5.png"
+          height="20"
+          alt="ikona validatora HTML"
+        />
+      </a>
+      <a href="#zaglavlje" title="Zaglavlje">
+        <img src="materijali/zaglavlje.png" height="20" alt="zaglavlje" />
+      </a>
+      <br />
+      <a
+        href="https://jigsaw.w3.org/css-validator/validator?uri=./css/nmidzic20.css"
+        title="Validator CSS"
+      >
+        <img
+          src="./materijali/CSS3.png"
+          height="20"
+          alt="ikona validatora CSS"
+        />
+      </a>
+      <span>nmidzic20.css</span>
+      <br />
+      <a
+        href="https://jigsaw.w3.org/css-validator/validator?uri=./css/nmidzic20_responzivni_dizajn.css"
+        title="Validator2 CSS"
+      >
+        <img
+          src="./materijali/CSS3.png"
+          height="20"
+          alt="ikona validatora CSS"
+        />
+      </a>
+      <span>nmidzic20_responzivni_dizajn.css</span>
+      <br />
+      <a
+        href="https://jigsaw.w3.org/css-validator/validator?uri=./css/nmidzic20_ispis.css"
+        title="Validator3 CSS"
+      >
+        <img
+          src="./materijali/CSS3.png"
+          height="20"
+          alt="ikona validatora CSS"
+        />
+      </a>
+      <span>nmidzic20_ispis.css</span>
+    </footer>
+  </body>
 </html>
