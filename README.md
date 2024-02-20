@@ -7,6 +7,7 @@ Login is available with any username and password, since the focus was on cookie
 ## Technologies
 
 Client-side: HTML, CSS, JavaScript
+
 Server-side: NodeJS and Express, used for dynamic generation of page content
 
 ## Installation
