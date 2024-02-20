@@ -640,6 +640,7 @@ function otvoriProzorDizajn() {
 function promijeniDizajn() {
   dizajnGumb = document.getElementById("promijeniDiz");
   console.log(dizajnGumb);
+
   dizajnGumb.addEventListener("click", function (event) {
     //napravicookie i kod ucitavanja stranice promijeni iz cookiea
     event.preventDefault();
